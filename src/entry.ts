@@ -1,6 +1,6 @@
 import { App } from "vue";
 import JSXButton from "./components/JSXButton";
-
+import './style.css'
 // 导出单独组件
 export { JSXButton };
 
@@ -10,5 +10,4 @@ export default {
   install(app: App): void {
     app.component(JSXButton.name, JSXButton);
   },
-
 };

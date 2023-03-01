@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/zombie-ui.umd.cjs",
+  "module": "./dist/zombie-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/zombie-ui.js",
+      "require": "./dist/zombie-ui.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -19,6 +30,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.15",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",

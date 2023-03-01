@@ -21,8 +21,6 @@ export default defineConfig({
       entry: resolve(__dirname, './src/entry.ts'),
       name: "ZombieUI",
       fileName: "zombie-ui",
-      // 导出模块格式
-      formats: ["es", "umd","iife"],
     },
   },
   plugins: [vue(),vueJsx()],
