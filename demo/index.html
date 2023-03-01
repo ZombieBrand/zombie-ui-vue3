@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie UI Demo</title>
+</head>
+
+<body>
+    <h1>Demo</h1>
+    <div id="app"></div>
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+      </script>
+    <script type="module">
+        import ZombieUI, {JSXButton} from "../dist/zombie-ui.js";
+        import {createApp} from "vue";
+        createApp({
+            template: `
+            <JSXButton></JSXButton>
+    `}).use(ZombieUI).mount('#app')
+    </script>
+</body>
+
+</html>

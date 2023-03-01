@@ -1,7 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import JSXButton from './JSXButton';
+</script>
 
 <template>
-  <h2>Hello Word</h2>
+  <h1 className="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+  <JSXButton />
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+h2 {
+  color: red;
+}
+</style>
