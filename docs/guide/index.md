@@ -1,4 +1,1 @@
-<script setup>
-</script>
-
-<HelloWorld></HelloWorld>
+# guide

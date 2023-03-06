@@ -1,9 +1,9 @@
-import DefaultTheme from 'vitepress/theme'
-import HelloWorld from '../../../src/components/HelloWorld.vue'
+import DefaultTheme from "vitepress/theme";
+import ZombieUI from "../../../src/entry";
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
-    DefaultTheme.enhanceApp(ctx)
-    ctx.app.component('HelloWorld', HelloWorld)
-  }
-}
+    DefaultTheme.enhanceApp(ctx);
+    ctx.app.use(ZombieUI);
+  },
+};
