@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-// import { JsxDemo as CountDemo, Demo } from 'my-custom-vue3-package';
-import { JsxDemo as CountDemo } from 'my-custom-vue3-package';
+// import { JsxDemo as CountDemo, Demo } from 'zombie-ui-vue3';
+import { JsxDemo as CountDemo } from 'zombie-ui-vue3';
 
 const count = ref(0);
 

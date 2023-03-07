@@ -35,10 +35,10 @@
       "@/*": [
         "src/*"
       ],
-      "my-custom-vue3-package": [
+      "zombie-ui-vue3": [
         "../src"
       ],
-      "my-custom-vue3-package/*": [
+      "zombie-ui-vue3/*": [
         "../src/*"
       ]
     }

@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "description for my-custom-vue3-package",
+  "description": "description for zombie-ui-vue3",
   "scripts": {
     "docs:build": "vitepress build docs",
     "docs:dev": "vitepress dev docs",

@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import router from './routes';
 
-import InstallPlugin from 'my-custom-vue3-package';
+import InstallPlugin from 'zombie-ui-vue3';
 
 import App from './App.vue';
 

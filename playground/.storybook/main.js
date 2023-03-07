@@ -20,8 +20,8 @@ module.exports = {
     return mergeConfig(config, {
       resolve: {
         alias: {
-          'my-custom-vue3-package': path.resolve(__dirname, '../../src'),
-          'my-custom-vue3-package/': path.resolve(__dirname, '../../src/'),
+          'zombie-ui-vue3': path.resolve(__dirname, '../../src'),
+          'zombie-ui-vue3/': path.resolve(__dirname, '../../src/'),
         },
       },
       plugins: [

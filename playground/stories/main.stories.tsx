@@ -1,5 +1,5 @@
-// import { Demo } from 'my-custom-vue3-package';
-import { JsxDemo as CountDemo } from 'my-custom-vue3-package';
+// import { Demo } from 'zombie-ui-vue3';
+import { JsxDemo as CountDemo } from 'zombie-ui-vue3';
 
 export default {
   title: 'Intro/Playground',

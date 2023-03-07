@@ -9,11 +9,11 @@
 
 :::code-group
 ```bash [Npm]
-npm install --save my-custom-vue3-package
+npm install --save zombie-ui-vue3
 ```
 
 ```bash [Yarn]
-yarn add my-custom-vue3-package
+yarn add zombie-ui-vue3
 ```
 :::
 

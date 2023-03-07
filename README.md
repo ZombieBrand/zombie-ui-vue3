@@ -4,7 +4,7 @@
 
 > It is recommended to use jsx to develop components, If you want to develop with .vue
 >
-> do change with pacckage.json:
+> do change with package.json:
 
 ```diff
 "scripts": {
@@ -49,7 +49,7 @@
 
 ## how to use
 
-replace ```my-custom-vue3-package``` with your package name
+replace ```zombie-ui-vue3``` with your package name
 
 ## Directory structure
 
@@ -81,7 +81,7 @@ Project
 
 ```js
 // main.ts
-import InstallPlugin from 'my-custom-vue3-package';
+import InstallPlugin from 'zombie-ui-vue3';
 
 app.use(InstallPlugin());
 ```
@@ -91,7 +91,7 @@ app.use(InstallPlugin());
 {
   "compilerOptions": {
     "types": [
-      "my-custom-vue3-package/global"
+      "zombie-ui-vue3/global"
     ]
   }
 }

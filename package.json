@@ -1,20 +1,12 @@
 {
-  "name": "my-custom-vue3-package",
-  "version": "0.0.2",
-  "description": "npm template for vue3s",
+  "name": "zombie-ui-vue3",
+  "version": "0.0.1",
+  "description": "learning project",
   "keywords": [
     "vue3"
   ],
-  "homepage": "https://github.com/codes-templates/npm-vue3#readme",
-  "bugs": {
-    "url": "https://github.com/codes-templates/npm-vue3/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codes-templates/npm-vue3.git"
-  },
   "license": "MIT",
-  "author": "jerrywu001 <57242263@163.com>",
+  "author": "ZombieBrand",
   "main": "./dist/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
@@ -46,7 +38,7 @@
     "tsup-w": "tsup --watch",
     "dev-pack": "npm run dev:usepack -w playground",
     "prepare": "chmod a+x .husky/* && husky install",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build:vite",
     "release": "bumpp --commit --tag --push",
     "stylelint": "stylelint **/*.{css,less,scss,vue}",
     "test": "vitest",

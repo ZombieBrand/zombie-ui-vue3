@@ -1,19 +1,19 @@
 ---
 layout: home
 
-title: my-custom-vue3-package
-titleTemplate: description for my-custom-vue3-package
+title: zombie-ui-vue3
+titleTemplate: description for zombie-ui-vue3
 
 hero:
-  name: my-custom-vue3-package
-  tagline: description for my-custom-vue3-package
+  name: zombie-ui-vue3
+  tagline: description for zombie-ui-vue3
   actions:
     - theme: brand
       text: Get Started
       link: /get-started/introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/codes-templates/npm-vue3
+      link: https://github.com/ZombieBrand/zombie-ui-vue3
 ---
 
 <Playground />

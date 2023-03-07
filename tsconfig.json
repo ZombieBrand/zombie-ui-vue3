@@ -26,10 +26,10 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "paths": {
-      "my-custom-vue3-package": [
+      "zombie-ui-vue3": [
         "src/index.ts"
       ],
-      "my-custom-vue3-package/*": [
+      "zombie-ui-vue3/*": [
         "./src/*"
       ]
     },

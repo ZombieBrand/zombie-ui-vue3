@@ -10,7 +10,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   resolve: {
     alias: {
-      'my-custom-vue3-package': path.resolve(__dirname, './src/index.ts'),
+      'zombie-ui-vue3': path.resolve(__dirname, './src/index.ts'),
     },
   },
   build: {
