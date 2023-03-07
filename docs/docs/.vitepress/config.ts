@@ -1,6 +1,4 @@
 import { defineConfig } from 'vitepress';
-import container from 'markdown-it-container';
-import { renderSandbox } from 'vitepress-plugin-sandpack';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { version } from '../../../package.json';
 import path from 'path';
@@ -11,16 +9,6 @@ export default defineConfig({
   description: 'zombie-ui-vue3 docs',
   lastUpdated: true,
 
-  markdown: {
-    config(md) {
-      md
-        .use(container, 'sandbox', {
-          render (tokens, idx) {
-            return renderSandbox(tokens, idx, 'sandbox');
-          },
-        });
-    },
-  },
 
   themeConfig: {
     nav: nav(),

@@ -23,11 +23,6 @@ see: demo --> `main.js`
 
 ## demo
 
-::: details For sandbox
-https://vitepress-sandbox.js-bridge.com
-:::
-
-::: sandbox
 ```vue App.vue
 <template>
   <div>{{ hello }}</div>
