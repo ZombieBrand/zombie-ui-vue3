@@ -1,42 +1,57 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import { resolve } from "path";
-import Icons from "unplugin-icons/vite";
-import IconsResolver from "unplugin-icons/resolver";
-import Components from "unplugin-vue-components/vite";
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
 
-const rollupOptions = {
-  external: ["vue", "vue-router"],
-  output: {
-    globals: {
-      vue: "Vue",
-    },
-    exports: "named",
-  },
-};
+import dts from 'vite-plugin-dts';
+import path from 'path';
+import Vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // 添加库模式配置
+  resolve: {
+    alias: {
+      'my-custom-vue3-package': path.resolve(__dirname, './src/index.ts'),
+    },
+  },
   build: {
-    rollupOptions,
-    minify: "esbuild",
-    sourcemap: true,
+    minify: true,
     lib: {
-      entry: resolve(__dirname, "./src/entry.ts"),
-      name: "ZombieUI",
-      fileName: "zombie-ui",
+      fileName: (type) => {
+        if (type === 'es') return 'esm/index.js';
+        if (type === 'cjs') return 'index.js';
+        return 'index.js';
+      },
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      formats: ['es', 'cjs'],
+    },
+    // sourcemap: true,
+    rollupOptions: {
+      external: [
+        'vue',
+      ],
     },
   },
   plugins: [
-    vue(),
-    vueJsx(),
-    Components({
-      resolvers: [IconsResolver()],
+    Vue({
+      // reactivityTransform: true,
     }),
-    Icons({
-      autoInstall: true,
-      compiler: "vue3",
+    vueJsx(),
+    // https://www.npmjs.com/package/vite-plugin-dts
+    dts({
+      include: 'src',
+      rollupTypes: true,
+      afterBuild: () => {
+        // do something else
+      },
     }),
   ],
+  // https://github.com/vitest-dev/vitest
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./setupTests.ts'],
+    transformMode: {
+      web: [/.[tj]sx$/],
+    },
+  },
 });

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "ES2015",
-    "module": "ESNext",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "Node",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "skipDefaultLibCheck": true,
@@ -13,11 +13,10 @@
     "esModuleInterop": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": false,
     "noImplicitThis": true,
@@ -25,25 +24,23 @@
     "importHelpers": false,
     "resolveJsonModule": true,
     "isolatedModules": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "types": [
+      "vite/client",
+      "../global"
+    ],
     "paths": {
+      "@/*": [
+        "src/*"
+      ],
       "my-custom-vue3-package": [
-        "src/index.ts"
+        "../src"
       ],
       "my-custom-vue3-package/*": [
-        "./src/*"
+        "../src/*"
       ]
-    },
-    "types": [
-      "./global"
-    ]
-  },
-  "include": [
-    "**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist",
-    "__unconfig_vite.config.ts"
-  ]
+    }
+  }
 }
